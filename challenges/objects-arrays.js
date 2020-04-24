@@ -7,24 +7,24 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
-
+  let tyro = {'tyrannosaurus', 'carnivorous', '7000kg', '12m', 'Late Cretaceous'}
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-
+  let stego = {'stegosaurus', 'herbivorous', '2000kg', '9m', 'Late Jurassic'}
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
-
+  let velo = {'velociraptor', 'carnivorous', '15kg', '1.8m', 'Late Cretaceous'}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(tyro[2]);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(velo[[1]]);
 
 // How long was a stegosaurus?
-console.log();
+console.log(stego[3]);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(tyro[4]);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
