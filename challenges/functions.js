@@ -6,14 +6,25 @@
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
+function cb(a, b){
+ return `...`
+}
 
+function consume(a, b, cb) {
+  return consume(a, b, cb(a, b))
+}
+console.log(cb(1,2))
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+function add(consume){
+  consume(Math.add(a + b))
+}
 
+console.log(consume(1, 2))
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 // console.log(consume(2, 2, add)); // 4
