@@ -7,29 +7,38 @@
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 function cb(a, b){
- return `...`
+  
 }
 
-function consume(a, b, cb) {
-  return consume(a, b, cb(a, b))
+
+ function consume(a, b, cb){
+  return cb(a, b);
+  
 }
-console.log(cb(1,2))
+
+
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add(consume){
-  consume(Math.add(a + b))
+const add = (a, b) => {
+  return a + b;
 }
 
-console.log(consume(1, 2))
+const multiply = (a, b) => {
+  return a * b;
+}
+
+const greeting = (first, last) => {
+  return `Hello ${first} ${last}, nice to meet you!`;
+}
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+ //console.log(consume(2, 2, add)); // 4
+ //console.log(consume(10, 16, multiply)); // 160
+ //console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -37,7 +46,7 @@ console.log(consume(1, 2))
 // Explain in your own words why nestedfunction can access the variable internal.
 
 // Explanation: 
-
+// Because Its placed insidt the open and close {} of the main function, so it still has access to it.
 
 const external = "I'm outside the function";
 
@@ -51,3 +60,4 @@ function myFunction() {
   nestedFunction();
 }
 myFunction();
+
